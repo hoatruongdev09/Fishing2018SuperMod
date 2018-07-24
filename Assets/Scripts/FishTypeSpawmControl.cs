@@ -31,7 +31,7 @@ public class FishTypeSpawmControl : MonoBehaviour {
 
         int a = Random.Range(0, _pre.Length);
         Transform _tr = Instantiate(_pre[a]).transform;
-        int directionPos = Random.Range(0, 4);
+        int directionPos = 3;// Random.Range(0, 4);
         switch (directionPos) {
             case 0:
                 float _posY0 = Random.Range(-limitHieght + 1, limitHieght - 1);
@@ -77,7 +77,7 @@ public class FishTypeSpawmControl : MonoBehaviour {
 
             case 3:
                 float _posY3 = Random.Range(-limitHieght + 1, limitHieght - 1);
-                _tr.position = new Vector2(limitWith + 1 + _distance, _posY3);
+                _tr.position = new Vector2(limitWith + 1 + _distance, _posY3) + new Vector2(5, 0);
                 if (_posY3 < -limitHieght / 2) {
                     _tr.eulerAngles = new Vector3(0, 0, Random.Range(-70, -85)); //(115, 165)
                 } else {
