@@ -53,6 +53,8 @@ public class GunControl : MonoBehaviour
 
     public void Fire()
     {
+        if (Time.timeScale == 0)
+            return;
         Vector3 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.up = Vector3.Normalize(mousePoint + Vector3.forward * 10 - transform.position);
         if (PlayerPrefs.GetInt("gold", 200) < _levelGun && _tenlua == false)
@@ -67,7 +69,7 @@ public class GunControl : MonoBehaviour
                 _bullet.transform.position = transform.position + transform.up * 0.5f;
                 _bullet.GetComponent<BulletControl>().InitBullet(_levelGun, transform, new Vector2(mousePoint.x, mousePoint.y));
 
-                UiTextSpawmControl.Instance.MinusGold(_levelGun);
+                //UiTextSpawmControl.Instance.MinusGold(_levelGun);
             }
         }
         if (_tenlua && _checkfire)

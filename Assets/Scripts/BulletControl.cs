@@ -12,6 +12,7 @@ public class BulletControl : MonoBehaviour
     Vector3 bulletPosScreen;
     Camera cam;
     SpriteRenderer _sprite;
+    public UiTextSpawmControl UITextSpawn;
     
 
     void Awake()
@@ -19,6 +20,7 @@ public class BulletControl : MonoBehaviour
         _sprite = GetComponent<SpriteRenderer>();
         gun = GameObject.Find("Gun");
         cam = Camera.main;
+        UITextSpawn = GameObject.Find("UITextSpawm").GetComponent<UiTextSpawmControl>();
     }
 
     public void InitBullet(int level, Transform Gun, Vector2 target)
@@ -50,9 +52,41 @@ public class BulletControl : MonoBehaviour
     }
 
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("cocl");
-    }
+        if (other.gameObject.tag == "fish")
+        {
+            other.GetComponent<FishControl>().hitDame(999, other.gameObject);
+            Destroy(this.gameObject);
+        }
+        if (other.gameObject.tag == "fishDie")
+        {
+            other.GetComponent<FishControl>().hitDame(999, other.gameObject);
+            Destroy(this.gameObject);
+            UITextSpawn.power -= 1;
+            UITextSpawn.powerText.text = UITextSpawn.power.ToString();
+            if (UITextSpawn.power < 1)
+            {
+                UITextSpawn.GameOver();
+            }
+        }
+        if (other.gameObject.tag == "fishLife")
+        {
+            other.GetComponent<FishControl>().hitDame(999, other.gameObject);
+            Destroy(this.gameObject);
+            UITextSpawn.power += 1;
+            UITextSpawn.powerText.text = UITextSpawn.power.ToString();
 
+        }
+        if (other.gameObject.tag == "iphone")
+        {
+            other.GetComponent<FishControl>().hitDame(999, other.gameObject);
+            Destroy(this.gameObject);
+            //UITextSpawn.power += 1;
+            UITextSpawn.powerText.text = UITextSpawn.power.ToString();
+
+        }
+    }
 }
+
+

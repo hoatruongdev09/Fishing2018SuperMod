@@ -16,8 +16,14 @@ public class UiTextSpawmControl : MonoBehaviour
 
     public static UiTextSpawmControl Instance;
 
+    public int power;
+    public UILabel powerText;
+    public UILabel gameoverText;
+
     void Start()
     {
+        //load ve tinh sau
+        power = 3;
         Instance = this;
         TextGold.text = "" + PlayerPrefs.GetInt("gold", 200);
         EXPbar.fillAmount = PlayerPrefs.GetFloat("EXP") / (450 + 500 * PlayerPrefs.GetInt("level", 1));
@@ -31,7 +37,30 @@ public class UiTextSpawmControl : MonoBehaviour
 
         PlayerPrefs.SetFloat("EXP", PlayerPrefs.GetFloat("EXP") + gold);
         EXPbar.fillAmount = PlayerPrefs.GetFloat("EXP") / (450 + 500 * PlayerPrefs.GetInt("level", 1));
-        RocketImg.fillAmount += (float)((float)gold / 1000);
+        //RocketImg.fillAmount += (float)((float)gold / 1000);
+        //if (RocketImg.fillAmount == 1)
+        //{
+        //    GunControl.Instance.ChangtoRocket();
+        //    RocketImg.fillAmount = 0;
+        //}
+
+        //if (EXPbar.fillAmount == 1)
+        //{
+        //    PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level", 1) + 1);
+        //    PlayerPrefs.SetFloat("EXP", 0);
+        //    TextLevel.text = PlayerPrefs.GetInt("level", 1) + "";
+        //    FishManage.Instance.ChangeToBonus();
+        //}
+    }
+
+    public void CallTextEff(Vector3 _pos, string gold)
+    {
+        GameObject obj = NGUITools.AddChild(_UiRoot, _TextChil);
+        obj.GetComponent<effScoreTextControl>().InitEffScore(_pos, gold);
+
+        //PlayerPrefs.SetFloat("EXP", PlayerPrefs.GetFloat("EXP") + gold);
+        EXPbar.fillAmount = PlayerPrefs.GetFloat("EXP") / (450 + 500 * PlayerPrefs.GetInt("level", 1));
+        //RocketImg.fillAmount += (float)((float)gold / 1000);
         //if (RocketImg.fillAmount == 1)
         //{
         //    GunControl.Instance.ChangtoRocket();
@@ -57,5 +86,11 @@ public class UiTextSpawmControl : MonoBehaviour
     {
         PlayerPrefs.SetInt("gold", PlayerPrefs.GetInt("gold", 200) - gold);
         TextGold.text = "" + PlayerPrefs.GetInt("gold",200);
+    }
+
+    public void GameOver()
+    {
+        gameoverText.gameObject.SetActive(true);
+        Time.timeScale = 0;
     }
 }
