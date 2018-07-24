@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{74DE5EC1-23B4-ACBB-4049-9C05279739CA}</ProjectGuid>
+	<ProjectGuid>{4CBB2019-1061-DAAE-61F0-ABC84A5FB663}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -324,6 +324,7 @@
      <Compile Include="Assets\Scripts\FishTypeSpawmControl.cs" />
      <Compile Include="Assets\Scripts\GunControl.cs" />
      <Compile Include="Assets\Scripts\ItemControl.cs" />
+     <Compile Include="Assets\Scripts\Limiter.cs" />
      <Compile Include="Assets\Scripts\Swim.cs" />
      <Compile Include="Assets\Scripts\SwinRotationBonus.cs" />
      <Compile Include="Assets\Scripts\UiTextSpawmControl.cs" />
@@ -587,7 +588,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{BB43BC7B-29CD-A0C0-6CED-E8AB0E72E714}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+      <Project>{9590096F-6053-B9A2-2F6B-E6CA64CEB563}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
