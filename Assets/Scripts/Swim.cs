@@ -56,18 +56,22 @@ public class Swim : MonoBehaviour
         mCurRotateData.rotatedAngle = 0F;
         mCurRotateData.rotateDelta = 0F;
     }
+    private void FlyUp() {
+        transform.Translate(Vector2.up * Speed * Time.deltaTime);
+    }
 
     void Update()
     {
-        transform.position += _tr.right * Time.deltaTime * Speed;
+        FlyUp();
+        //transform.position += _tr.right * Time.deltaTime * Speed;
 
-        if (acpectRotate)
-        {
-            mCurRotateData.rotateDelta = RotateSpeed * Time.deltaTime * (1 - mCurRotateData.rotatedAngle / mCurRotateData.angleAbs);
-            _tr.rotation *= Quaternion.Euler(0, 0, mCurRotateData.rotateDir * mCurRotateData.rotateDelta);
-            mCurRotateData.rotatedAngle += mCurRotateData.rotateDelta;
-            if (mCurRotateData.rotatedAngle > mCurRotateData.stopRotateRadian)
-                acpectRotate = false;
-        }
+        //if (acpectRotate)
+        //{
+        //    mCurRotateData.rotateDelta = RotateSpeed * Time.deltaTime * (1 - mCurRotateData.rotatedAngle / mCurRotateData.angleAbs);
+        //    _tr.rotation *= Quaternion.Euler(0, 0, mCurRotateData.rotateDir * mCurRotateData.rotateDelta);
+        //    mCurRotateData.rotatedAngle += mCurRotateData.rotateDelta;
+        //    if (mCurRotateData.rotatedAngle > mCurRotateData.stopRotateRadian)
+        //        acpectRotate = false;
+        //}
     }
 }

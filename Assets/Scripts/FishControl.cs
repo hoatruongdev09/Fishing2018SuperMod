@@ -56,7 +56,7 @@ public class FishControl : MonoBehaviour
                 _ani.Play(AnimationNameDie, 0, 0);
                 GetComponent<BoxCollider2D>().enabled = false;
                 Instantiate(Resources.Load("coinEff"), transform.position + Vector3.up * 0.5f, Quaternion.identity);
-                UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, _gold);
+               // UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, _gold);
                 FishManage.Instance._FishMange.Remove(transform);
                 Destroy(gameObject, 0.8f);
             }
