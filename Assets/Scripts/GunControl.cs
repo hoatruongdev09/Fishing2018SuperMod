@@ -9,6 +9,8 @@ public class GunControl : MonoBehaviour
     public GameObject tenlua;
     public GameObject _effboom;
     public GameObject popUp;
+    public GameObject voiBone;
+    public GameObject gunSpot;
 
     bool _checkfire;
     bool _tenlua;
@@ -56,7 +58,12 @@ public class GunControl : MonoBehaviour
         if (Time.timeScale == 0)
             return;
         Vector3 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.up = Vector3.Normalize(mousePoint + Vector3.forward * 10 - transform.position);
+        Vector2 direction = mousePoint - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        voiBone.transform.rotation = rotation;
+        //voiBone.transform.up = Vector3.Normalize(mousePoint + Vector3.forward * 10 - voiBone.transform.position);
+        //Debug.Log(voiBone.transform.up);
         if (PlayerPrefs.GetInt("gold", 200) < _levelGun && _tenlua == false)
             popUp.SetActive(true);
         else
@@ -66,9 +73,10 @@ public class GunControl : MonoBehaviour
                 _ani.Play("Fire", 0, 0);
                 AudioControl.Instance.shoot();
                 GameObject _bullet = (GameObject)Instantiate(Bullet);
-                _bullet.transform.position = transform.position + transform.up * 0.5f;
+                //_bullet.transform.position = transform.position + transform.up * 0.5f;
+                _bullet.transform.position = gunSpot.transform.position;
                 _bullet.GetComponent<BulletControl>().InitBullet(_levelGun, transform, new Vector2(mousePoint.x, mousePoint.y));
-
+                //_bullet.transform.up = Vector3.Normalize(mousePoint + Vector3.forward * 10 - _bullet.transform.position);
                 //UiTextSpawmControl.Instance.MinusGold(_levelGun);
             }
         }
