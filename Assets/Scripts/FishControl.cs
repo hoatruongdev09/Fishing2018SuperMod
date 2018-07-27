@@ -58,22 +58,20 @@ public class FishControl : MonoBehaviour
                 _ani.Play(AnimationNameDie, 0, 0);
                 GetComponent<BoxCollider2D>().enabled = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Instantiate(Resources.Load("coinEff"), transform.position + Vector3.up * 0.5f, Quaternion.identity);
                 UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, _gold);
 =======
                 
+=======
+                Instantiate(Resources.Load("coinEff"), transform.position + Vector3.up * 0.5f, Quaternion.identity);
+>>>>>>> parent of 6eb26bb... voi to, bong tru diem
                 if (obj.tag == "fish")
-                    
-                {
-                    UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, _gold, false);
-                    Instantiate(Resources.Load("coinEff"), transform.position + Vector3.up * 0.5f, Quaternion.identity);
-                }
-                else if (obj.tag == "fishMinus")
-                    UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, _gold, true);
+                    UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, _gold);
                 else if (obj.tag == "fishDie")
-                    UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, "Power", true);
+                    UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, "Die");
                 else if (obj.tag == "fishLife")
-                    UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, "Power", false);
+                    UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, "Life");
                 else
                     UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, "iPhone");
 

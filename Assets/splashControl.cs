@@ -7,7 +7,7 @@ public class splashControl : MonoBehaviour
 
     void Start()
     {
-        
+        PlayerPrefs.DeleteAll();
         Invoke("Play", 2);
     }
 

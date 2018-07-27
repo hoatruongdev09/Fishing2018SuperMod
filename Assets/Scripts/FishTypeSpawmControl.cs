@@ -101,7 +101,6 @@ public class FishTypeSpawmControl : MonoBehaviour {
                 break;
         }
 
-        //yield return new WaitForSeconds(Random.Range(countTime, RndCountTime));
         yield return new WaitForSeconds(countTime);
         StartCoroutine(spawm(0));
     }

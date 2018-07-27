@@ -62,11 +62,6 @@ public class BulletControl : MonoBehaviour
             other.GetComponent<FishControl>().hitDame(999, other.gameObject);
             Destroy(this.gameObject);
         }
-        if (other.gameObject.tag == "fishMinus")
-        {
-            other.GetComponent<FishControl>().hitDame(999, other.gameObject);
-            Destroy(this.gameObject);
-        }
         if (other.gameObject.tag == "fishDie")
         {
             other.GetComponent<FishControl>().hitDame(999, other.gameObject);

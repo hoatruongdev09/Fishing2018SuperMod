@@ -1,3 +1,41 @@
 Base path: C:/Program Files/Unity5.1.3f1/Editor/Data
+<<<<<<< HEAD
 Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-5708
+=======
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-13776
+>>>>>>> parent of 6eb26bb... voi to, bong tru diem
 Cmd: getPlatforms
+Cmd: preprocess
+  error: 2 plat 16 at (45): Can't find include file UnitySprites.cginc
+  insize=1403 outsize=1140 ok=0
+Cmd: preprocess
+  insize=1053 outsize=495 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=860 outsize=1087 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=860 outsize=616 kw= ok=1
+Cmd: preprocess
+  insize=1458 outsize=1635 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=29895 outsize=3825 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=29895 outsize=1436 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=14655 outsize=2728 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=14655 outsize=746 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=25953 outsize=4239 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=25953 outsize=1453 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=26805 outsize=3963 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=26805 outsize=1737 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=15419 outsize=2647 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=15419 outsize=1436 kw= ok=1
+Cmd: preprocess
+  error: 2 plat 16 at (45): Can't find include file UnitySprites.cginc
+  insize=1401 outsize=1138 ok=0
