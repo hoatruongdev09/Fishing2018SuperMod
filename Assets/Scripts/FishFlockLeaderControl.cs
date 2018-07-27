@@ -12,8 +12,11 @@ public class FishFlockLeaderControl : MonoBehaviour
     public int minCount;
     public int maxCount;
 
+    UiTextSpawmControl UiTextSpawmControl;
+
     public void FlockStart()
     {
+        UiTextSpawmControl = GameObject.Find("UITextSpawm").GetComponent<UiTextSpawmControl>();
         _fish = new List<Transform>();
         countFish = Random.Range(minCount, maxCount);
         for (int i = 0; i < countFish; i++)
@@ -22,7 +25,9 @@ public class FishFlockLeaderControl : MonoBehaviour
             _tr.GetComponent<FishFlockControl>().SetLeader(transform);
             _fish.Add(_tr);
             _tr.position = new Vector2(transform.position.x, transform.position.y) + Random.insideUnitCircle * 0.8f;
-           // FishManage.Instance._FishMange.Add(_tr);
+            // FishManage.Instance._FishMange.Add(_tr);
+            UiTextSpawmControl.fishCount++;
+            Debug.Log("Fish 1 count: " + UiTextSpawmControl.fishCount);
         }
     }
 

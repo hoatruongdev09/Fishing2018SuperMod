@@ -14,8 +14,11 @@ public class FishFollowLeaderControl : MonoBehaviour
     public int minCount;
     public int maxCount;
 
+    UiTextSpawmControl UiTextSpawmControl;
+
     public void FollowStart()
     {
+        UiTextSpawmControl = GameObject.Find("UITextSpawm").GetComponent<UiTextSpawmControl>();
         _swim = GetComponent<Swim>();
         _fish = new List<Transform>();
         countFish = Random.Range(minCount, maxCount);
@@ -28,6 +31,8 @@ public class FishFollowLeaderControl : MonoBehaviour
             _tr.GetComponent<FishFollowControl>().SetTarget(transform, Vector3.Magnitude(transform.right * Distan * i));
             _tr.GetComponent<Swim>().Speed = _swim.Speed;
             _fish.Add(_tr);
+            UiTextSpawmControl.fishCount++;
+            Debug.Log("Fish 1 count: " + UiTextSpawmControl.fishCount);
         }
     }
 
