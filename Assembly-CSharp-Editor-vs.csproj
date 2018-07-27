@@ -118,7 +118,6 @@
      <Compile Include="Assets\Anima2D\Scripts\Editor\TimeLine\TimeArea.cs" />
      <Compile Include="Assets\Anima2D\Scripts\Editor\TimeLine\TimeLine.cs" />
      <Compile Include="Assets\Anima2D\Scripts\Editor\TimeLine\ZoomableArea.cs" />
-     <Compile Include="Assets\Anima2D\Scripts\Editor\ToolsExtra.cs" />
      <Compile Include="Assets\Anima2D\Scripts\Editor\Triangle\Algorithm\Dwyer.cs" />
      <Compile Include="Assets\Anima2D\Scripts\Editor\Triangle\Algorithm\ITriangulator.cs" />
      <Compile Include="Assets\Anima2D\Scripts\Editor\Triangle\Algorithm\Incremental.cs" />
@@ -177,7 +176,6 @@
      <Compile Include="Assets\Anima2D\Scripts\Editor\VertexAnimation\TransformTracker.cs" />
      <Compile Include="Assets\Anima2D\Scripts\Editor\VertexAnimation\VertexSelection.cs" />
      <Compile Include="Assets\Anima2D\Scripts\Editor\VertexManipulator\IVertexManipulable.cs" />
-     <Compile Include="Assets\Anima2D\Scripts\Editor\VertexManipulator\IVertexManipulator.cs" />
      <Compile Include="Assets\Anima2D\Scripts\Editor\VertexManipulator\RectManipulator\IRectManipulable.cs" />
      <Compile Include="Assets\Anima2D\Scripts\Editor\VertexManipulator\RectManipulator\IRectManipulatorData.cs" />
      <Compile Include="Assets\Anima2D\Scripts\Editor\VertexManipulator\RectManipulator\RectManipulator.cs" />
@@ -534,8 +532,6 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
       <Project>{9590096F-6053-B9A2-2F6B-E6CA64CEB563}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
-    <ProjectReference Include="Assembly-CSharp-vs.csproj">
-      <Project>{4CBB2019-1061-DAAE-61F0-ABC84A5FB663}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass-vs.csproj">
       <Project>{122A1DEA-CAE7-5D47-DA65-B826F92EED83}</Project>      <Name>Assembly-CSharp-Editor-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>

@@ -114,11 +114,9 @@
      <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Waterfall.cs" />
      <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Wave.cs" />
      <Compile Include="Assets\2DxFX\Scripts\_2dxFX_WoodFX.cs" />
-     <Compile Include="Assets\Anima2D\Examples\Scripts\CharacterMotion.cs" />
      <Compile Include="Assets\Anima2D\Examples\Scripts\Follow.cs" />
      <Compile Include="Assets\Anima2D\Examples\Scripts\SkinnedMeshCombiner.cs" />
      <Compile Include="Assets\Anima2D\Examples\Scripts\SpringBone.cs" />
-     <Compile Include="Assets\Anima2D\Examples\Scripts\SpringCollider.cs" />
      <Compile Include="Assets\Anima2D\Examples\Scripts\SpringManager.cs" />
      <Compile Include="Assets\Anima2D\Examples\Scripts\SpriteCycle.cs" />
      <Compile Include="Assets\Anima2D\Examples\Scripts\SpriteCycleParallax.cs" />
