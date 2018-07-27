@@ -76,8 +76,13 @@ public class GunControl : MonoBehaviour
                 //_bullet.transform.position = transform.position + transform.up * 0.5f;
                 _bullet.transform.position = gunSpot.transform.position;
                 _bullet.GetComponent<BulletControl>().InitBullet(_levelGun, transform, new Vector2(mousePoint.x, mousePoint.y));
+<<<<<<< HEAD
+
+                UiTextSpawmControl.Instance.MinusGold(0);
+=======
                 //_bullet.transform.up = Vector3.Normalize(mousePoint + Vector3.forward * 10 - _bullet.transform.position);
                 //UiTextSpawmControl.Instance.MinusGold(_levelGun);
+>>>>>>> 6eb26bb3581bdb754309990e65af7cdeadbff9ed
             }
         }
         if (_tenlua && _checkfire)

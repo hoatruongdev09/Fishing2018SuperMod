@@ -57,6 +57,10 @@ public class FishControl : MonoBehaviour
                 _swim.enabled = false;
                 _ani.Play(AnimationNameDie, 0, 0);
                 GetComponent<BoxCollider2D>().enabled = false;
+<<<<<<< HEAD
+                Instantiate(Resources.Load("coinEff"), transform.position + Vector3.up * 0.5f, Quaternion.identity);
+                UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, _gold);
+=======
                 
                 if (obj.tag == "fish")
                     
@@ -73,6 +77,7 @@ public class FishControl : MonoBehaviour
                 else
                     UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, "iPhone");
 
+>>>>>>> 6eb26bb3581bdb754309990e65af7cdeadbff9ed
                 FishManage.Instance._FishMange.Remove(transform);
                 Destroy(gameObject, 0.8f);
             }
