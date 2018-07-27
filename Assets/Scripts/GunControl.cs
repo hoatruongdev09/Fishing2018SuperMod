@@ -67,7 +67,7 @@ public class GunControl : MonoBehaviour
                 _bullet.transform.position = transform.position + transform.up * 0.5f;
                 _bullet.GetComponent<BulletControl>().InitBullet(_levelGun, transform, new Vector2(mousePoint.x, mousePoint.y));
 
-                UiTextSpawmControl.Instance.MinusGold(_levelGun);
+                UiTextSpawmControl.Instance.MinusGold(0);
             }
         }
         if (_tenlua && _checkfire)
