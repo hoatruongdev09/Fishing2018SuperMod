@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FishControl : MonoBehaviour
-{
+public class FishControl : MonoBehaviour {
 
     public string AnimationName;
     public string AnimationNameDie;
@@ -27,8 +26,7 @@ public class FishControl : MonoBehaviour
 
 
 
-    void OnEnable()
-    {
+    void OnEnable() {
         _checkInvisible = false;
         _ani = GetComponent<Animator>();
         _ani.Play(AnimationName, 0, Random.Range(0f, 1f));
@@ -41,34 +39,26 @@ public class FishControl : MonoBehaviour
             _hp = Random.Range(Hp - RndHp, Hp - RndHp);
     }
 
-    public void hitDame(int dame, GameObject obj)
-    {
-        if (_checkCollsion == null || (_checkCollsion.GetInstanceID() != obj.GetInstanceID()))
-        {
+    public void hitDame(int dame, GameObject obj) {
+        if (_checkCollsion == null || (_checkCollsion.GetInstanceID() != obj.GetInstanceID())) {
             _hp -= dame;
             _checkCollsion = obj;
 
-            if (_hp <= 0)
-            {
-                if (_callDie != null)
-                {
+            if (_hp <= 0) {
+                if (_callDie != null) {
                     _callDie();
                 }
                 _swim.enabled = false;
                 _ani.Play(AnimationNameDie, 0, 0);
                 GetComponent<BoxCollider2D>().enabled = false;
-<<<<<<< HEAD
+
                 Instantiate(Resources.Load("coinEff"), transform.position + Vector3.up * 0.5f, Quaternion.identity);
-                UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, _gold);
-=======
-                
-                if (obj.tag == "fish")
-                    
-                {
+                //UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, _gold.ToString());
+
+                if (obj.tag == "fish") {
                     UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, _gold, false);
                     Instantiate(Resources.Load("coinEff"), transform.position + Vector3.up * 0.5f, Quaternion.identity);
-                }
-                else if (obj.tag == "fishMinus")
+                } else if (obj.tag == "fishMinus")
                     UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, _gold, true);
                 else if (obj.tag == "fishDie")
                     UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, "Power", true);
@@ -77,17 +67,15 @@ public class FishControl : MonoBehaviour
                 else
                     UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, "iPhone");
 
->>>>>>> 6eb26bb3581bdb754309990e65af7cdeadbff9ed
-                FishManage.Instance._FishMange.Remove(transform);
+
+                    FishManage.Instance._FishMange.Remove(transform);
                 Destroy(gameObject, 0.8f);
             }
         }
     }
 
-    public void CollisionWithWave()
-    {
-        if (_callDie != null)
-        {
+    public void CollisionWithWave() {
+        if (_callDie != null) {
             _callDie();
         }
         FishManage.Instance._FishMange.Remove(transform);
@@ -96,66 +84,48 @@ public class FishControl : MonoBehaviour
 
     }
     public void ColliderExit() {
-        if(_callDie != null) {
+        if (_callDie != null) {
             _callDie();
         }
         FishManage.Instance._FishMange.Remove(transform);
         Destroy(gameObject);
     }
 
-    void OnBecameVisible()
-    {
-        if (gameObject.tag == "fish")
-        {
+    void OnBecameVisible() {
+        if (gameObject.tag == "fish") {
             if (_checkInvisible) return;
             _checkInvisible = true;
             FishManage.Instance._FishMange.Add(transform);
-            if (gameObject.name == "Fish12FreeSign(Clone)" || gameObject.name == "Fish11FreeSign(Clone)")
-            {
+            if (gameObject.name == "Fish12FreeSign(Clone)" || gameObject.name == "Fish11FreeSign(Clone)") {
                 FishManage.Instance._CaMapManage.Add(transform);
-            }
-            else
-            {
-                if (gameObject.name == "Fish7Follow(Clone)" || gameObject.name == "Fish7FollowBonus(Clone)" || gameObject.name == "Fish7FreeSign(Clone)" || gameObject.name == "Fish6Follow(Clone)" || gameObject.name == "Fish6FollowBonus(Clone)" || gameObject.name == "Fish6FreeSign(Clone)")
-                {
+            } else {
+                if (gameObject.name == "Fish7Follow(Clone)" || gameObject.name == "Fish7FollowBonus(Clone)" || gameObject.name == "Fish7FreeSign(Clone)" || gameObject.name == "Fish6Follow(Clone)" || gameObject.name == "Fish6FollowBonus(Clone)" || gameObject.name == "Fish6FreeSign(Clone)") {
                     FishManage.Instance._MucManager.Add(transform);
                 }
             }
         }
     }
 
-    void OnDestroy()
-    {
-        if (gameObject.tag == "fish")
-        {
+    void OnDestroy() {
+        if (gameObject.tag == "fish") {
             FishManage.Instance._FishMange.Remove(transform);
-            if (gameObject.name == "Fish12FreeSign(Clone)" || gameObject.name == "Fish11FreeSign(Clone)")
-            {
+            if (gameObject.name == "Fish12FreeSign(Clone)" || gameObject.name == "Fish11FreeSign(Clone)") {
                 FishManage.Instance._CaMapManage.Remove(transform);
-            }
-            else
-            {
-                if (gameObject.name == "Fish7Follow(Clone)" || gameObject.name == "Fish7FollowBonus(Clone)" || gameObject.name == "Fish7FreeSign(Clone)" || gameObject.name == "Fish6Follow(Clone)" || gameObject.name == "Fish6FollowBonus(Clone)" || gameObject.name == "Fish6FreeSign(Clone)")
-                {
+            } else {
+                if (gameObject.name == "Fish7Follow(Clone)" || gameObject.name == "Fish7FollowBonus(Clone)" || gameObject.name == "Fish7FreeSign(Clone)" || gameObject.name == "Fish6Follow(Clone)" || gameObject.name == "Fish6FollowBonus(Clone)" || gameObject.name == "Fish6FreeSign(Clone)") {
                     FishManage.Instance._MucManager.Remove(transform);
                 }
             }
         }
     }
 
-    void OnBecameInvisible()
-    {
-        if (gameObject.tag == "fish")
-        {
+    void OnBecameInvisible() {
+        if (gameObject.tag == "fish") {
             FishManage.Instance._FishMange.Remove(transform);
-            if (gameObject.name == "Fish12FreeSign(Clone)" || gameObject.name == "Fish11FreeSign(Clone)")
-            {
+            if (gameObject.name == "Fish12FreeSign(Clone)" || gameObject.name == "Fish11FreeSign(Clone)") {
                 FishManage.Instance._CaMapManage.Remove(transform);
-            }
-            else
-            {
-                if (gameObject.name == "Fish7Follow(Clone)" || gameObject.name == "Fish7FollowBonus(Clone)" || gameObject.name == "Fish7FreeSign(Clone)" || gameObject.name == "Fish6Follow(Clone)" || gameObject.name == "Fish6FollowBonus(Clone)" || gameObject.name == "Fish6FreeSign(Clone)")
-                {
+            } else {
+                if (gameObject.name == "Fish7Follow(Clone)" || gameObject.name == "Fish7FollowBonus(Clone)" || gameObject.name == "Fish7FreeSign(Clone)" || gameObject.name == "Fish6Follow(Clone)" || gameObject.name == "Fish6FollowBonus(Clone)" || gameObject.name == "Fish6FreeSign(Clone)") {
                     FishManage.Instance._MucManager.Remove(transform);
                 }
             }
