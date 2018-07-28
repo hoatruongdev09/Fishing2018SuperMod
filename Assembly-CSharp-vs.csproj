@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files/Unity5.1.3f1/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>D:/Program Files/Unity/5.1.3f1/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity5.1.3f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>D:/Program Files/Unity/5.1.3f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +114,30 @@
      <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Waterfall.cs" />
      <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Wave.cs" />
      <Compile Include="Assets\2DxFX\Scripts\_2dxFX_WoodFX.cs" />
+     <Compile Include="Assets\Anima2D\Examples\Scripts\CharacterMotion.cs" />
+     <Compile Include="Assets\Anima2D\Examples\Scripts\Follow.cs" />
+     <Compile Include="Assets\Anima2D\Examples\Scripts\SkinnedMeshCombiner.cs" />
+     <Compile Include="Assets\Anima2D\Examples\Scripts\SpringBone.cs" />
+     <Compile Include="Assets\Anima2D\Examples\Scripts\SpringCollider.cs" />
+     <Compile Include="Assets\Anima2D\Examples\Scripts\SpringManager.cs" />
+     <Compile Include="Assets\Anima2D\Examples\Scripts\SpriteCycle.cs" />
+     <Compile Include="Assets\Anima2D\Examples\Scripts\SpriteCycleParallax.cs" />
+     <Compile Include="Assets\Anima2D\Scripts\Bone2D.cs" />
+     <Compile Include="Assets\Anima2D\Scripts\Control.cs" />
+     <Compile Include="Assets\Anima2D\Scripts\EditorUpdaterProxy.cs" />
+     <Compile Include="Assets\Anima2D\Scripts\Ik2D.cs" />
+     <Compile Include="Assets\Anima2D\Scripts\IkCCD2D.cs" />
+     <Compile Include="Assets\Anima2D\Scripts\IkGroup.cs" />
+     <Compile Include="Assets\Anima2D\Scripts\IkLimb2D.cs" />
+     <Compile Include="Assets\Anima2D\Scripts\IkSolver2D.cs" />
+     <Compile Include="Assets\Anima2D\Scripts\IkSolver2DCCD.cs" />
+     <Compile Include="Assets\Anima2D\Scripts\IkSolver2DLimb.cs" />
+     <Compile Include="Assets\Anima2D\Scripts\MathUtils.cs" />
+     <Compile Include="Assets\Anima2D\Scripts\Pose.cs" />
+     <Compile Include="Assets\Anima2D\Scripts\PoseManager.cs" />
+     <Compile Include="Assets\Anima2D\Scripts\SpriteMesh.cs" />
+     <Compile Include="Assets\Anima2D\Scripts\SpriteMeshAnimation.cs" />
+     <Compile Include="Assets\Anima2D\Scripts\SpriteMeshInstance.cs" />
      <Compile Include="Assets\AudioControl.cs" />
      <Compile Include="Assets\ButtonBuyControl.cs" />
      <Compile Include="Assets\ButtonStartControl.cs" />
@@ -165,6 +189,7 @@
      <Compile Include="Assets\DarkTonic\MasterAudio\Scripts\Utility\UtilStrings.cs" />
      <Compile Include="Assets\GoldText.cs" />
      <Compile Include="Assets\ItemCountLb.cs" />
+     <Compile Include="Assets\LeaderBoard Scripts\MyScrollView.cs" />
      <Compile Include="Assets\MainPlayControl.cs" />
      <Compile Include="Assets\MainStartControl.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipItems.cs" />
@@ -457,8 +482,10 @@
      <None Include="Assets\2DxFX\Resources\_2dxFX_Outline.shader" />
      <None Include="Assets\2DxFX\Resources\_2dxFX_Pixel8bitsBW.shader" />
      <None Include="Assets\2DxFX\Resources\_2dxFX_Liquid.shader" />
+     <None Include="Assets\Anima2D\Examples\Shaders\VisibleInsideMask.shader" />
      <None Include="Assets\Xffect\Tutorial\GettingStart\readme.txt" />
      <None Include="Assets\Xffect\Tutorial\AdvanceShader\Dissolve\readme.txt" />
+     <None Include="Assets\Anima2D\Examples\Shaders\VisibleOutsideMask.shader" />
      <None Include="Assets\2DxFX\Resources\_2dxFX_ColorChange.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (TextureClip).shader" />
      <None Include="Assets\2DxFX\Resources\_2dxFX_Cartoon.shader" />
@@ -468,6 +495,7 @@
      <None Include="Assets\2DxFX\Resources\_2dxFX_StoneFX.shader" />
      <None Include="Assets\2DxFX\Resources\_2dxFX_EdgeColor.shader" />
      <None Include="Assets\Xffect\Resources\Shaders\ImageEffect\xft_glow_downsample.shader" />
+     <None Include="Assets\Anima2D\Version.txt" />
      <None Include="Assets\2DxFX\Resources\_2dxFX_WoodFX.shader" />
      <None Include="Assets\2DxFX\Resources\_2dxFX_BurningFX.shader" />
      <None Include="Assets\2DxFX\Resources\_2dxFX_Threshold.shader" />
@@ -524,6 +552,8 @@
      <None Include="Assets\2DxFX\Resources\_2dxFX_Fire.shader" />
      <None Include="Assets\Plugins\Android\unityads\res\drawable\unityads_icon_speaker_base.xml" />
      <None Include="Assets\Xffect\EnhancementTools\XWeaponTrail\Model\readme.txt" />
+     <None Include="Assets\Anima2D\Examples\Shaders\Unlit-Alpha-Cull-off.shader" />
+     <None Include="Assets\Anima2D\Licenses.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text.shader" />
      <None Include="Assets\2DxFX\Resources\_2dxFX_Clipping.shader" />
      <None Include="Assets\2DxFX\Resources\_2dxFX_Additive.shader" />
@@ -533,6 +563,7 @@
      <None Include="Assets\Xffect\EnhancementTools\XPerObjImageEffects\Resources\Shaders\xft_whitepass.shader" />
      <None Include="Assets\2DxFX\Resources\_2dxFX_Wave.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 3.shader" />
+     <None Include="Assets\Anima2D\Examples\Shaders\VertexLitOneDirectional.shader" />
      <None Include="Assets\Xffect\Resources\Shaders\Object\xft_volume_fog.shader" />
      <None Include="Assets\Plugins\Android\unityads\res\drawable\unityads_icon_play.xml" />
      <None Include="Assets\2DxFX\Resources\_2dxFX_Color.shader" />
@@ -550,6 +581,7 @@
      <None Include="Assets\NGUI\Examples\Shaders\Refractive.shader" />
      <None Include="Assets\2DxFX\Resources\_2dxFX_IcedFX.shader" />
      <None Include="Assets\Xffect\Resources\Shaders\ImageEffect\GlowPerObj\xft_glow_perobj_additive.shader" />
+     <None Include="Assets\Anima2D\Readme.txt" />
      <None Include="Assets\Xffect\Resources\Shaders\ImageEffect\GlowPerObj\xft_glow_blend.shader" />
      <None Include="Assets\2DxFX\Resources\_2dxFX_PlasmaRainbow.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text (TextureClip).shader" />
@@ -574,16 +606,16 @@
      <None Include="Assets\2DxFX\Resources\_2dxFX_WaterAndBackground.shader" />
      <None Include="Assets\2DxFX\Resources\_2dxFX_DesintegrationFX.shader" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity5.1.3f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Program Files/Unity/5.1.3f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Program Files/Unity5.1.3f1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>D:/Program Files/Unity/5.1.3f1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity5.1.3f1/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>D:/Program Files/Unity/5.1.3f1/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>C:/Program Files/Unity5.1.3f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ <HintPath>D:/Program Files/Unity/5.1.3f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -9,6 +9,7 @@ public class MainStartControl : MonoBehaviour
         Time.timeScale = 1;
         AudioControl.Instance.Offbg();
         AudioControl.Instance.openbg();
+        PlayerPrefs.DeleteAll();
     }
 
     void Update()
