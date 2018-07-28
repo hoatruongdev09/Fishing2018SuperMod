@@ -53,7 +53,7 @@ public class FishControl : MonoBehaviour {
                 GetComponent<BoxCollider2D>().enabled = false;
 
                 Instantiate(Resources.Load("coinEff"), transform.position + Vector3.up * 0.5f, Quaternion.identity);
-                //UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, _gold.ToString());
+                //UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, _gold.ToString()); dong ni bo 
 
                 if (obj.tag == "fish") {
                     UiTextSpawmControl.Instance.CallTextEff(transform.position + Vector3.up * 0.5f, _gold, false);
